@@ -58,4 +58,7 @@ shape = SubResource( 3 )
 
 [node name="PuddleSpawner" type="Node2D" parent="."]
 script = ExtResource( 4 )
+
+[node name="InitialPosition" type="Node2D" parent="PuddleSpawner"]
+position = Vector2( 260.519, 880 )
 [connection signal="dragged" from="Player/DragListener" to="Player" method="_on_DragListener_dragged"]
