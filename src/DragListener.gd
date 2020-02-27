@@ -21,7 +21,7 @@ func _input(event):
 			initial_drag_pos = event.position
 
 func _draw():
-	if initial_drag_pos == null:
+	if initial_drag_pos == null or GameState.dead:
 		return
 	drag_vector = -(get_viewport().get_mouse_position() - initial_drag_pos)
-	draw_line(Vector2(), drag_vector, Color(1, 0, 0), 5.0)
+	draw_line(Vector2(), drag_vector, Color(0, 0, 0), 4.0)
